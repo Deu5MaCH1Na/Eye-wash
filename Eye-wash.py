@@ -4,7 +4,7 @@ from win32api import *
 import time
 def foo(hwnd, mouse):
     if IsWindow(hwnd) and IsWindowEnabled(hwnd) and IsWindowVisible(hwnd) :
-        if !('write here.' in GetClassName(hwnd)):     #在此处填入白名单类名(即不隐藏)
+        if not ('write here.' in GetClassName(hwnd)):     #在此处填入白名单类名(即不隐藏)
             alpha =40                                  #透明度
             h=hwnd
             GetWindowLong(h, GWL_EXSTYLE)
@@ -14,8 +14,7 @@ def foo(hwnd, mouse):
             except:
                 pass
            
-c=FindWindow('Shell_TrayWnd',None)
-ShowWindow(c,SW_SHOW)
+
 while(1):
     EnumWindows(foo, 0)
     time.sleep(1)
