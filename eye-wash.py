@@ -19,3 +19,4 @@ ShowWindow(c,SW_SHOW)
 while(1):
     EnumWindows(foo, 0)
     time.sleep(1)
+ 
